@@ -2,8 +2,7 @@
 Solo Checkpoint 02
 Author: Bro. Hayes
 '''
-# Gekk==s
-​
+
 random = False
 def main():
     ''' Holds the main game loop logic
@@ -36,17 +35,46 @@ def create_board():
         It initializes the positions with the numbers for the person to pick
         return: the board as a list
     '''
-    pass
+    board = []
+    for square in range(9):
+        board.append(square)
+    return board
+
 ​
 def display_board(board):
     ''' Displays the current board
         return: None
     '''
+    """
+    1|2|3
+    -+-+-
+    4|5|6
+    -+-+-
+    7|8|9
+    """
+    displayed_board = ""
+
+    for square in range(9):
+        displayed_board += f"{board[square]}"
+        if square == 3 or square == 6:
+            displayed_board += "\n-+-+-\n"
+        elif square != 9:
+            displayed_board += "|"
+        else: # Reached the last square
+            return displayed_board
+            
+
+
+        
+
     pass
 ​
 def is_draw(board):
     ''' return: True if board is a draw, False if board is still playable '''
-    pass
+    for square in range(9):
+        if board[square] != "x" and board[square] != "o":
+            return False
+    return True
 ​
 def is_winner(board):
     ''' return: True if someone won, False if there is no winner '''
