@@ -5,6 +5,7 @@ Author: Samuel Casellas
 
 
 
+#go through?
 def main():
     ''' Holds the main game loop logic
         Selects a player
