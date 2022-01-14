@@ -2,6 +2,9 @@
 Solo Checkpoint 02
 Author: Bro. Hayes
 '''
+"""
+HackerRanker for tough questions
+"""
 
 random = False
 def main():
@@ -62,10 +65,6 @@ def display_board(board):
             displayed_board += "|"
         else: # Reached the last square
             return displayed_board
-            
-
-
-        
 
     pass
 ​
@@ -86,6 +85,7 @@ def make_move(player, board):
         return: None
     '''
     
+
     pass      
 ​
 def next_player(current):
