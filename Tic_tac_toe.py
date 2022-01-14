@@ -78,7 +78,7 @@ def is_winner(board): #Compelete
     # of win patterns: 8
     Win_patterns = [[1,2,3],[4,5,6],[7,8,9],[1,4,7],[1,4,7],[2,5,8],[3,6,9],[1,5,9],[3,5,7]]
 
-    #Check if win for X
+    #Check if win for x
     for pattern in Win_patterns:
         count = 0
         for square in pattern:
@@ -87,7 +87,7 @@ def is_winner(board): #Compelete
         if count == 3:
             return True
 
-    #Check if win for O
+    #Check if win for o
     for pattern in Win_patterns:
         count = 0
         for square in pattern:
