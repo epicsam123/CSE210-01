@@ -20,14 +20,19 @@ def main():
 
     print("\n\n\nWelcome to Tic Tac Toe!\n")
 
-    while is_winner(board) == False and is_draw(board) == False:
+    while is_winner(board) == None and not is_draw(board):
         print(display_board(board))
         make_move(player, board)
         player = next_player(player)
         print(display_board(board))
         print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 
-    print("\nThanks for playing!\n")
+    winner_statement = is_winner(board)
+    if winner_statement == None:
+        winner_statement = "A draw!"
+
+    print(f"{winner_statement}\nThanks for playing!\n")
+
 
 
 def create_board(): #Complete
@@ -83,7 +88,7 @@ def is_winner(board): #Compelete
             if board[square-1] == 'x':
                 count += 1
         if count == 3:
-            return True
+            return "Player \"x\" is the winner!"
 
     #Check if win for o
     for pattern in Win_patterns:
@@ -92,10 +97,10 @@ def is_winner(board): #Compelete
             if board[square-1] == 'o':
                 count += 1
         if count == 3:
-            return True
+            return "Player \"o\" is the winner!"
 
     # No winner
-    return False
+    return None
 
 def make_move(player, board): #Complete
     ''' Prompts player to select a square to play
