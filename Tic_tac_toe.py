@@ -1,10 +1,8 @@
 '''
 Solo Checkpoint 02
-Author: Bro. Hayes
+Author: Samuel Casellas
 '''
-"""
-HackerRanker for tough questions
-"""
+
 
 
 def main():
